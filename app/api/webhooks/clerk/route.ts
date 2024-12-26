@@ -49,7 +49,6 @@ export async function POST(req: Request): Promise<Response> {
     return new Response("Invalid webhook signature", { status: 400 });
   }
 
-  const { id } = evt.data;
   const eventType = evt.type;
 
   try {
